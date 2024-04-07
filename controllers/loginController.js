@@ -21,7 +21,8 @@ const userLogin = asyncHandler(async(req, res) =>
              throw new Error('Invalid credentials');
         }
        
-        res.status(200).send('Login successful');
+        //res.status(200).send('Login successful');
+        return res.status(200).json({"message": "login successfull"})
     } 
     catch (error) 
     {
